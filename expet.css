@@ -417,7 +417,46 @@ html, body { height: 100%; }
     opacity:1;
     transform: translate(-50%,-50%) rotate(var(--angle)) translate(var(--radius)) rotate(calc(-1*var(--angle)));
   }
+/* image slider style  start*/
+   .image-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      background: #ffff;
+      margin: 30px ;
+    }
+    .slider {
+      position: relative;
+      width: 90%;
+      max-width: 1100px;
+      aspect-ratio: 16/9;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    .slider img {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      animation: fade 20s infinite;
+    }
+    /*  delay */
+    .slider img:nth-child(1) { animation-delay: 0s; }
+    .slider img:nth-child(2) { animation-delay: 5s; }
+    .slider img:nth-child(3) { animation-delay: 10s; }
+    .slider img:nth-child(4) { animation-delay: 15s; }
 
+    @keyframes fade {
+      0%   { opacity: 0; }
+      5%   { opacity: 1; }  
+      25%  { opacity: 1; }  
+      30%  { opacity: 0; }   
+      100% { opacity: 0; }
+    }
+/* image slider style  end*/
   /* --- Small tweaks for very tiny screens --- */
   @media (max-width:380px){
     .fab{ --fab: 58px; }
