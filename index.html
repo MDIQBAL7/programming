@@ -1,25 +1,169 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="index.css">
-    <style>
-        
-    </style>
-</head>
-<body>
-    <header>
+<html lang="bn">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
 
+    <!-- Font Awesome -->
+     <!-- font awsome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="expet.css" />
+
+  </head>
+  <body>
+    <!-- Hidden toggle -->
+    <input
+      type="checkbox"
+      id="menu-toggle"
+      class="menu-toggle"
+      aria-hidden="true"
+    />
+
+    <!-- header section  -->
+    <header class="site-header">
+      <div class="container">
+        <div class="flex between center">
+          <div class="flex gap center">
+            <!-- Hamburger as label for checkbox -->
+            <label for="menu-toggle" class="hamburger" aria-label="Open menu">
+              <i class="fa-solid fa-bars"></i>
+            </label>
+            <h1 class="brand">
+              <span class="word-1">বই</span> <span class="word-2">প</span
+              ><span class="word-3">ড়া</span>
+            </h1>
+          </div>
+          <div class="shop"><i class="fa-solid fa-cart-shopping cart"></i></div>
+        </div>
+      </div>
     </header>
 
-    <main>
+    <!-- Sidebar -->
+    <aside class="sidebar" aria-label="Sidebar">
+      <div class="sidebar-header">
+        <h2 class="for-hiden">মেনু</h2>
+        <!-- Close button also label -->
+        <label for="menu-toggle" class="close-btn" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
+        </label>
+      </div>
+      <nav class="sidebar-nav">
+        <a href="#login"><i class="fa-regular fa-user"></i> Account</a>
+        <a href="#profile"><i class="fa-solid fa-id-badge"></i> Log out</a>
+        <a href="#signout"
+          ><i class="fa-solid fa-right-from-bracket"></i> Login</a>
+        <a href="#signout"><i class="fa-solid fa-arrow-right"></i> Sign in</a>
+        <a href="#signout"><i class="fa-solid fa-arrow-left"></i> Sign Out</a>
+      </nav>
+    </aside>
 
+    <!-- Clickable overlay to close -->
+    <label for="menu-toggle" class="overlay" aria-hidden="true"></label>
+
+    <!-- main section  -->
+    <main class="container">
+      <!-- search bar section  -->
+    <div class="search-wrap" role="search" aria-label="প্রধান সার্চ বার">
+          <!-- Hidden checkbox -->
+          <input id="menu-toggle-search" class="menu-toggle-search" type="checkbox" />
+          <!-- Left button -->
+          <label for="menu-toggle-search" class="menu-label">
+            <i class="fa-solid fa-angle-down"></i>
+          </label>
+          <!-- Dropdown -->
+          <nav class="menu-options" aria-label="search options">
+            <ul>
+              <li>Option 1</li>
+              <li>Option 2</li>
+              <li>Option 3</li>
+            </ul>
+          </nav>
+          <!-- Search input -->
+          <form class="search-form" action="#" onsubmit="return false;">
+            <input class="search-input si" type="search" placeholder="Search" aria-label="search input">
+          </form>
+          <!-- Search button -->
+          <button class="search-btn" type="submit" aria-label="Search">
+              <i class="fa-brands fa-searchengin"></i>
+          </button>
+    </div>
+
+    <!-- header item section  -->
+     <section>
+      <div>
+        <div>
+          <div class="item-container flex center between">
+            <a href="" class="home"><i class="fa-solid fa-house"></i>Home</a>
+            <a href=""><i class="fa-solid fa-arrow-up-right-dots"></i>Popular</a>
+            <a href=""><i class="fa-solid fa-layer-group"></i>Category</a>
+            <a href="" class="last"><i class="fa-solid fa-book"></i>Free <br>Books</a>
+          </div>
+        </div>
+      </div>
+     </section>
+     <!-- image section  -->
+     <div class="image">
+        <img src="img1.jpg" alt="">
+     </div>
+
+     <!-- Demo section  -->
+      <div>
+        <div style="padding-bottom: 130px;">
+          <div class="grid fled">
+            <div class="gird-item"><i class="fa-regular fa-circle-user"></i>Demo</div>
+            <div class="gird-item"><i class="fa-solid fa-star"></i>Best</div>
+            <div class="gird-item"><i class="fa-regular fa-circle-user"></i>Demo</div>
+            <div class="gird-item"><i class="fa-solid fa-star"></i>Best</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- footer section   -->
+
+      <footer class="footer-1">
+        <div class="bottom-bar footer" aria-label="Bottom Navigation">
+        <a class="tab active" href="#">
+          <i class="fa-solid fa-house"></i><span>Home</span>
+        </a>
+
+        <!-- Toggle (hidden) -->
+        <input type="checkbox" id="fab-toggle" aria-hidden="true"/>
+
+        <!-- FAB -->
+        <label for="fab-toggle" class="fab" aria-label="Open quick actions" role="button">
+          <i class="fa-solid fa-plus plus" aria-hidden="true"></i>
+          <i class="fa-solid fa-xmark close" aria-hidden="true"></i>
+        </label>
+
+        <a class="tab" href="#">
+          <i class="fa-regular fa-user"></i><span>Profile</span>
+        </a>
+
+        <!-- Radial actions (semi-circle upwards) -->
+        <div class="actions" aria-label="Quick actions">
+          <!-- angles: 210°, 180°, 150°, 120° to form a fan above -->
+          <a href="#" class="action" style="--angle:210deg" aria-label="Blog">
+            <i class="fa-regular fa-folder"></i>
+            <span>Blog</span>
+          </a>
+          <a href="#" class="action" style="--angle:180deg" aria-label="Course">
+            <i class="fa-regular fa-book-open"></i>
+            <span>কোর্স</span>
+          </a>
+          <a href="#" class="action" style="--angle:150deg" aria-label="Subscription">
+            <i class="fa-regular fa-bell"></i>
+            <span>Subscription</span>
+          </a>
+          <a href="#" class="action" style="--angle:120deg" aria-label="Notes">
+            <i class="fa-regular fa-file-lines"></i>
+            <span>নোট</span>
+          </a>
+        </div>
+      </div>
+      </footer>
     </main>
-
-    <footer>
-        
-    </footer>
-</body>
+  </body>
 </html>
